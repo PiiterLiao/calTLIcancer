@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>簡易保費計算機</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>台壽一年定期防癌附約試算</h1>
+    <a class="text-info" href="http://insprod.tii.org.tw/database/insurance/open2.asp?id=EF6CC17D-CCC6-4703-ADD7-6770B43A5786">點選開啟費率表(來源:保發中心)</a>
+    <form class="mt-1">
+      <div class="form-group">
+        <label for="startYear">投保年齡</label>
+        <input type="number" class="form-control" id="startYear" placeholder="0-70">
+      </div>
+      <div class="form-group">
+        <label for="endYear">終止年齡</label>
+        <input type="number" class="form-control" id="endYear" placeholder="0-85，注意：此為年齡年末，若僅投保一年請填入同投保年齡">
+      </div>
+      <div class="form-group">
+        <label for="amount">保額(萬元)</label>
+        <input type="number" class="form-control" id="amount" placeholder="10-500">
+      </div>
+      <div class="form-group">
+        <label for="gender">性別</label>
+        <select class="form-control" id="gender">
+          <option>男</option>
+          <option>女</option>
+        </select>
+      </div>
+      <div class="col-auto pl-0 mb-2">
+        <button type="submit" class="btn btn-info" id="calculate">點擊計算</button>
+      </div>
+    </form>
+    <h5>總繳保費: <span id="sumPrice"></span> </h5>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="./price-table.js"></script>
+</body>
+
+</html>
